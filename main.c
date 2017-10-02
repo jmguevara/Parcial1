@@ -8,18 +8,18 @@ struct nodo {
 struct nodo *primero, *ultimo, *primero2, *ultimo2;
 
 void mostrar_menu() {
-      printf("\n\nMen˙:\n=====\n\n");
-      printf("1.- AÒadir elementos lista 1\n");
-      printf("2.- AÒadir elementos lista 2\n");
+      printf("\n\nMen√∫:\n=====\n\n");
+      printf("1.- A√±adir elementos lista 1\n");
+      printf("2.- A√±adir elementos lista 2\n");
       printf("3.- Mostrar lista 1\n");
       printf("4.- Mostrar lista 2\n");
       printf("5.- Metodo del parcial\n");
       printf("6.- Salir\n\n");
-      printf("Escoge una opciÛn: ");
+      printf("Escoge una opci√≥n: ");
       fflush(stdout);
  }
 
-/* Con esta funciÛn aÒadimos un elemento al final de la lista */
+/* Con esta funci√≥n a√±adimos un elemento al final de la lista */
 
 void anadir_elemento() {
       struct nodo *nuevo;
@@ -43,22 +43,22 @@ void anadir_elemento() {
 
 
 
-	/* el campo siguiente va a ser NULL por ser el ˙ltimo elemento de la lista */
+	/* el campo siguiente va a ser NULL por ser el √∫ltimo elemento de la lista */
       nuevo->siguiente = NULL; 
-/* ahora metemos el nuevo elemento en la lista. lo situamos         al final de la lista, se comprueba si la lista est· vacÌa. si primero==NULL es que no hay ning˙n elemento en la lista. tambiÈn vale ultimo==NULL */
+/* ahora metemos el nuevo elemento en la lista. lo situamos         al final de la lista, se comprueba si la lista est√° vac√≠a. si primero==NULL es que no hay ning√∫n elemento en la lista. tambi√©n vale ultimo==NULL */
       if (primero==NULL) {
 		printf( "Primer elemento\n");
 		primero = nuevo;
 		ultimo = nuevo;
 	} else {
-           /* el hasta ahora ˙ltimo apuntar· al nuevo */
+           /* el hasta ahora √∫ltimo apuntar√° al nuevo */
            ultimo->siguiente = nuevo;
-           /* hacemos que el nuevo sea ahora el ˙ltimo */
+           /* hacemos que el nuevo sea ahora el √∫ltimo */
            ultimo = nuevo;
       }
  }
  
- /* Con esta funciÛn aÒadimos un elemento al final de la lista */
+ /* Con esta funci√≥n a√±adimos un elemento al final de la lista */
 
 void anadir_elemento2() {
       struct nodo *nuevo;
@@ -82,17 +82,17 @@ void anadir_elemento2() {
 
 
 
-	/* el campo siguiente va a ser NULL por ser el ˙ltimo elemento de la lista */
+	/* el campo siguiente va a ser NULL por ser el √∫ltimo elemento de la lista */
       nuevo->siguiente = NULL; 
-/* ahora metemos el nuevo elemento en la lista. lo situamos         al final de la lista, se comprueba si la lista est· vacÌa. si primero==NULL es que no hay ning˙n elemento en la lista. tambiÈn vale ultimo==NULL */
+/* ahora metemos el nuevo elemento en la lista. lo situamos         al final de la lista, se comprueba si la lista est√° vac√≠a. si primero==NULL es que no hay ning√∫n elemento en la lista. tambi√©n vale ultimo==NULL */
       if (primero2==NULL) {
 		printf( "Primer elemento\n");
 		primero2 = nuevo;
 		ultimo2 = nuevo;
 	} else {
-           /* el hasta ahora ˙ltimo apuntar· al nuevo */
+           /* el hasta ahora √∫ltimo apuntar√° al nuevo */
            ultimo2->siguiente = nuevo;
-           /* hacemos que el nuevo sea ahora el ˙ltimo */
+           /* hacemos que el nuevo sea ahora el √∫ltimo */
            ultimo2 = nuevo;
       }
  }
@@ -104,14 +104,14 @@ void anadir_elemento2() {
 
       int i; i=0;
       auxiliar = primero;
-      printf("\nMostrando la lista completa:\n");
+      printf("\nMostrando la lista 1 completa:\n");
       while (auxiliar!=NULL) {
             printf( "Elemento: %d \n",                    			
 			auxiliar->elemento);
             auxiliar = auxiliar->siguiente;
             i++;
       }
-      if (i==0) printf( "\nLa lista est· vacÌa!!\n" );
+      if (i==0) printf( "\nLa lista est√° vac√≠a!!\n" );
  }
  
  void mostrar_lista2() {
@@ -119,14 +119,14 @@ void anadir_elemento2() {
 
       int i; i=0;
       auxiliar = primero2;
-      printf("\nMostrando la lista completa:\n");
+      printf("\nMostrando la lista 2 completa:\n");
       while (auxiliar!=NULL) {
             printf( "Elemento: %d \n",                    			
 			auxiliar->elemento);
             auxiliar = auxiliar->siguiente;
             i++;
       }
-      if (i==0) printf( "\nLa lista est· vacÌa!!\n" );
+      if (i==0) printf( "\nLa lista est√° vac√≠a!!\n" );
  }
  
  
@@ -187,7 +187,7 @@ int main() {
                 case '5': enlazar(primero, primero2); break;
                 case '6': exit( 1 );
                 default:
-			printf( "OpciÛn no v·lida\n" );
+			printf( "Opci√≥n no v√°lida\n" );
                          break;
              }
      } while (opcion!='6');
